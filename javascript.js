@@ -1,17 +1,17 @@
 function add(a,b) {
-    return a+b
+    display.innerHTML = a+b
 }
 
 function substract(a,b) {
-    return a-b
+    display.innerHTML =  a-b
 }
 
 function multiply(a,b) {
-    return a*b
+    display.innerHTML =  a*b
 }
 
 function divide(a,b) {
-    return a/b
+    display.innerHTML =  a/b
 }
 
 function operate(operator, a, b) {
@@ -27,32 +27,34 @@ function clearDisplay() {
 
 function printOperand(operand) {
     display.innerHTML += operand
-    let number = display.innerHTML
 }
-
-function saveOperator(operator) {
-    clearDisplay()
-    return operator
-}
-
+let x = ""
+let y = ""
+let operator = ""
 let clear = document.querySelector("#clear")
 let display = document.getElementById("display")
 clear.addEventListener("click", clearDisplay)
 let digits = document.querySelectorAll("#digits") 
 let operators = document.querySelectorAll("#operator")
-let operator = ""
 for (let i=0; i<digits.length; i++) {
     digits[i].addEventListener("click", function() {
         printOperand(digits[i].innerHTML)
+        
     })
 }
 for (let i=0; i<operators.length; i++) {
     operators[i].addEventListener("click", function() {
-        saveOperator(operators[i].innerHTML)
+        x = display.innerHTML
+        operator = operators[i].innerHTML
+        clearDisplay()
     })
 }   
 let evaluate = document.querySelector("#evaluate")
-evaluate.addEventListener("click", operate(operator, numberA, numberB))
+evaluate.addEventListener("click", function() {
+    y = display.innerHTML
+    clearDisplay()
+    operate(operator, parseInt(x), parseInt(y))
+})
 
 
 
