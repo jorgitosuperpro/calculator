@@ -6,6 +6,7 @@
     margin: auto;
     align-content: end;
     text-align: right;
+    overflow: hidden;
 }
 
 #buttons {
