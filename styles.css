@@ -9,6 +9,34 @@
     overflow: hidden;
 }
 
+#second-display {
+    height: 25px;
+    width: 300px;
+    margin: auto;
+    align-content: end;
+    text-align: right;
+    overflow: hidden;
+    font-size: small;
+}
+
+#third-display {
+    height: 25px;
+    width: 300px;
+    margin: auto;
+    align-content: end;
+    text-align: right;
+    overflow: hidden;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    background-color: darkgrey;
+    margin-left: 500px;
+}
+
 #buttons {
     display: flex;
     flex-wrap: wrap;
@@ -23,4 +51,8 @@
 button {
     width: 40px;
     height: 20px; 
+}
+
+h1 {
+    text-align: center;
 }
