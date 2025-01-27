@@ -1,3 +1,11 @@
+body {
+    background-color: lightblue;
+}
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('/home/jorge/repos/calculator/digital-7.regular.ttf') format('truetype');
+   }
+
 #display {
     border-style: solid;
     border-width: 1px;
@@ -7,6 +15,11 @@
     align-content: end;
     text-align: right;
     overflow: hidden;
+    border-width: 2px;
+    border-color: black;
+    background-color: darkcyan;
+    font-family:'digital-clock-font';
+
 }
 
 #second-display {
@@ -16,7 +29,7 @@
     align-content: end;
     text-align: right;
     overflow: hidden;
-    font-size: small;
+    font-size: medium;
 }
 
 #third-display {
@@ -26,6 +39,8 @@
     align-content: end;
     text-align: right;
     overflow: hidden;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 #calculator {
@@ -35,6 +50,10 @@
     height: 450px;
     background-color: darkgrey;
     margin-left: 500px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    border-width: 3px;
 }
 
 #buttons {
@@ -46,13 +65,29 @@
     margin: auto;
     margin-top: 25px;
     justify-content: space-between;
+    
 }
 
 button {
+    background-color: rgb(22, 19, 19);
     width: 40px;
     height: 20px; 
+    padding: 0;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold   ;
+    color: white;
 }
 
+button:active {
+    background-color: rgb(36, 174, 96);
+    transform: translateY(4px);
+}
 h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#license {
     text-align: center;
 }
