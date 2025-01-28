@@ -9,10 +9,11 @@ body {
 #display {
     border-style: solid;
     border-width: 1px;
+    border-radius: 5px;
     height: 50px;
     width: 300px;
     margin: auto;
-    align-content: end;
+    /*align-content: end;*/
     text-align: right;
     overflow: hidden;
     border-width: 2px;
@@ -30,17 +31,19 @@ body {
     text-align: right;
     overflow: hidden;
     font-size: medium;
+    
 }
 
 #third-display {
     height: 25px;
     width: 300px;
-    margin: auto;
-    align-content: end;
-    text-align: right;
+    /*margin: auto;*/
+    /*align-content: end;*/
+    /*text-align: right;*/
     overflow: hidden;
     font-size: 32px;
     font-weight: bold;
+    
 }
 
 #calculator {
@@ -49,7 +52,7 @@ body {
     width: 350px;
     height: 450px;
     background-color: darkgrey;
-    margin-left: 500px;
+    margin: auto;
     border-style: solid;
     border-color: black;
     border-radius: 15px;
@@ -79,11 +82,22 @@ button {
     color: white;
 }
 
+#clear {
+    background-color: red;
+}
+#evaluate {
+    background-color: red;
+}
+#operator {
+    background-color: blue;
+}
 button:active {
     background-color: rgb(36, 174, 96);
     transform: translateY(4px);
 }
 h1 {
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
